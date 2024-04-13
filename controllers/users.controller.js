@@ -21,6 +21,8 @@ const getUserById = async(req, res) => {
        const {id} = req.params;
        const user = await Users.findById(id);
        if(!user) return res.status(404).json({message: "User not found"})
+
+       res.status(200).json({user})
     }
     catch(err){
         throw new Error(err)
@@ -28,4 +30,4 @@ const getUserById = async(req, res) => {
 }
 
 
-module.exports = {registerUser}
+module.exports = {registerUser, getUserById}
