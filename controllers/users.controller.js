@@ -29,5 +29,14 @@ const getUserById = async(req, res) => {
     }
 }
 
+const getAllUsers = asunc(req, res) => {
+    try{
+
+    }
+    catch(err){
+        throw new Error(err)
+    }
+}
+
 
 module.exports = {registerUser, getUserById}
