@@ -5,6 +5,9 @@ const blogRouter = require('./routes/blogs.routes')
 
 const {mongoConnection} = require('./configs/mongoConnection')
 
+app.use(express.json());
+app.use(express.urlencoded())
+
 app.use('/api/auth', authRouter);
 app.use('api/blog', blogRouter);
 
